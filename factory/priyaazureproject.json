@@ -1,0 +1,15 @@
+{
+	"name": "priyaazureproject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a629396e-1cb4-41f5-b264-5ff4b5f001c0",
+		"tenantId": "228d1a47-3959-4dd4-bc1e-fbe5f8729b95"
+	}
+}
