@@ -122,7 +122,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "current ",
+					"variableName": "current",
 					"value": {
 						"value": "@utcNow()",
 						"type": "Expression"
