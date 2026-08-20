@@ -65,11 +65,7 @@
 				"outputs": [
 					{
 						"referenceName": "Parquet_dynamic",
-						"type": "DatasetReference",
-						"parameters": {
-							"container": "bronze",
-							"folder": "users"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			},
