@@ -276,7 +276,10 @@
 														"value": "@{item().table}_cdc",
 														"type": "Expression"
 													},
-													"file": "cdc.json"
+													"file": {
+														"value": "@concat(item().table,'_',variables('current'))",
+														"type": "Expression"
+													}
 												}
 											}
 										]
