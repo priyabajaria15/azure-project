@@ -261,7 +261,10 @@
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": "cdc",
+													"folder": {
+														"value": "@concat(item().table,'_',variables('current'))",
+														"type": "Expression"
+													},
 													"file": "empty.json"
 												}
 											}
