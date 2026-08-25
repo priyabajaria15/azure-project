@@ -294,7 +294,7 @@
 													"value": "@{pipeline().parameters.table}_cdc",
 													"type": "Expression"
 												},
-												"file": "empty.json"
+												"file": "cdc.json"
 											}
 										}
 									],
@@ -570,10 +570,7 @@
 																"value": "@item().table",
 																"type": "Expression"
 															},
-															"file": {
-																"value": "@concat(item().table,'_',variables('current'))",
-																"type": "Expression"
-															}
+															"file": "empty.json"
 														}
 													},
 													"enableLogging": false,
@@ -707,6 +704,8 @@
 					{
 						"name": "Web1",
 						"type": "WebActivity",
+						"state": "Inactive",
+						"onInactiveMarkAs": "Succeeded",
 						"dependsOn": [
 							{
 								"activity": "ForEach1",
@@ -846,14 +845,7 @@
 						}
 					}
 				},
-				"schema": {
-					"type": "object",
-					"properties": {
-						"cdc": {
-							"type": "string"
-						}
-					}
-				}
+				"schema": {}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/datalake')]"
