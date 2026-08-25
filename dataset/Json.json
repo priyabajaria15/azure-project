@@ -35,13 +35,6 @@
 				}
 			}
 		},
-		"schema": {
-			"type": "object",
-			"properties": {
-				"cdc": {
-					"type": "string"
-				}
-			}
-		}
+		"schema": {}
 	}
 }
