@@ -253,7 +253,7 @@
 											"value": "@{pipeline().parameters.table}_cdc",
 											"type": "Expression"
 										},
-										"file": "empty.json"
+										"file": "cdc.json"
 									}
 								}
 							],
