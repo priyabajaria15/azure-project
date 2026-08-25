@@ -188,10 +188,7 @@
 														"value": "@item().table",
 														"type": "Expression"
 													},
-													"file": {
-														"value": "@concat(item().table,'_',variables('current'))",
-														"type": "Expression"
-													}
+													"file": "empty.json"
 												}
 											},
 											"enableLogging": false,
