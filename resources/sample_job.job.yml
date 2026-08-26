@@ -1,0 +1,23 @@
+# Job that runs the Spotify ETL pipeline
+
+resources:
+  jobs:
+    spotify_pipeline_job:
+      name: spotify_pipeline_job
+
+      trigger:
+        periodic:
+          interval: 1
+          unit: DAYS
+
+      parameters:
+        - name: catalog
+          default: ${var.catalog}
+
+        - name: schema
+          default: ${var.schema}
+
+      tasks:
+        - task_key: refresh_pipeline
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.spotify_dab_etl.id}

@@ -1,0 +1,14 @@
+# The main pipeline for spotify_dab
+
+resources:
+  pipelines:
+    spotify_dab_etl:
+      name: spotify_dab_etl_v2
+      catalog: ${var.catalog}
+      schema: ${var.schema}
+      serverless: true
+      root_path: ../src/silver
+
+      libraries:
+        - glob:
+            include: ../src/silver/**
